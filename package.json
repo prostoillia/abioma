@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/prostoillia/abioma/issues"
   },
-  "homepage": "https://github.com/prostoillia/abioma#readme"
+  "homepage": "https://github.com/prostoillia/abioma#readme",
+  
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "webpack"
+  },
+  "heroku-run-build-script": true
 }
