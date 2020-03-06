@@ -2,6 +2,10 @@ var TelegramBot = require('node-telegram-bot-api');
 
 var mp = 0;
 
+var express = require("express");
+var app = express();
+app.use(express.logger());
+
 var adminId = 550660165;
 
 var orderString = [];
@@ -43,6 +47,10 @@ bot.onText(/\/buy/, (msg, match) => {
 
 bot.on( " polling_error " , ( err ) => inputFIO());
 
+
+app.get('/', function(request, response) {
+  response.send('Hello World!');
+});
 /*function inputPhone(){
     bot.sendMessage(chatId, 'Укажите пожалуйста ваш номер телефона');
     mp = 2;
@@ -100,3 +108,8 @@ if (query.data == 'buytovar') {
 function plusMp(){
   mp++;
 }
+
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
