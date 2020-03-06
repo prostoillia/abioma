@@ -19,6 +19,8 @@
   "homepage": "https://github.com/prostoillia/abioma#readme",
   
   "scripts": {
-  "start": "node src/index.js",
-  "build": "webpack"
+  "dev": "nuxt",
+  "build": "nuxt build",
+  "start": "nuxt start",
+  "heroku-postbuild": "npm run build"
 }
