@@ -85,6 +85,7 @@ else if(mp == 5){
   bot.sendMessage(chatId, 'Спасибо, мы скоро свяжемся с вами!!!');
   bot.sendMessage(adminId, orderString.join(","));
   console.log(orderString.join(","));
+  orderString = [];
   mp = 0;
 }
 });
